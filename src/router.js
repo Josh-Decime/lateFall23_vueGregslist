@@ -24,7 +24,13 @@ const routes = [
   {
     path: '/houses',
     name: 'Houses',
-    component: loadPage('HousesPage')
+    component: loadPage('HousesPage'),
+    beforeEnter: authGuard
+  },
+  {
+    path: '/houses/:houseId',
+    name: 'HouseDetails',
+    component: loadPage('HouseDetailsPage')
   },
   {
     path: '/account',
