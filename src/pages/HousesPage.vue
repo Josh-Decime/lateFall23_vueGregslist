@@ -1,10 +1,12 @@
 <template>
   <div class="component">
     THE HOMES PAGE
+    <div>Create A House</div>
+    <HouseForm />
 
   </div>
 
-  <section class="row my-2">
+  <section class="row m-2">
     <div v-for="house in houses" class="col-4 mb-3">
       <HouseCard :house="house" />
     </div>
@@ -18,6 +20,7 @@ import { computed, ref, onMounted } from 'vue';
 import Pop from '../utils/Pop.js';
 import { houseService } from '../services/HouseService.js';
 import HouseCard from '../components/HouseCard.vue';
+import HouseForm from '../components/HouseForm.vue';
 export default {
   setup() {
     onMounted(() => {

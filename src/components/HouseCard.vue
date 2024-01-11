@@ -1,6 +1,6 @@
 <template>
     <div class="house-card border border-secondary rounded shadow">
-        <img :src="house.imgUrl" alt="">
+        <img :src="house.imgUrl" :alt="`Picture of $${house.price} house`" class="img-fluid rounded-top">
         <div class="p-1">
             <p class="fs-3 text-center fw-bold">${{ house.price }}</p>
             <p>{{ house.bedrooms }} bds | {{ house.bathrooms }} ba | {{ house.levels }} lvls | {{ house.year }} yr</p>
